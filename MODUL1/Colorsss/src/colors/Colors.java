@@ -13,18 +13,24 @@ private boolean rect;
 public Colors(){
 rect=false; setSize(300,150);
 change();}
+
 public boolean getRect(){
 return rect;}
+
 public void setRect(boolean flag){
 this.rect=flag; repaint();}
+
 public void change(){
 color = randomColor();
 repaint();}
+
+
 private Color randomColor(){
 int r=(int)(255*Math.random());
 int g =(int)(255*Math.random());
 int b=(int)(255*Math.random());
 return new Color(r,g,b);}
+
 public void paint(Graphics g){
 Dimension d = getSize(); // gaguna
 int h=d.height; // gaguna
@@ -42,7 +48,7 @@ p.addPoint(70, 25);  //kanan atas
 g.fillPolygon(p);
 
 // LINGKARAN
-g.setColor(Color.pink);
+g.setColor(color);
 g.fillOval(100, 25, 100, 100);
 
 //SEGITIGA KANAN
